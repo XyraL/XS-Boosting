@@ -288,8 +288,21 @@ they all read this table.
 ['veh_airbag']   = { name = 'veh_airbag',   label = 'Airbag',    weight = 1000, type = 'item', image = 'veh_airbag.png',   unique = false, useable = false, shouldClose = false, combinable = nil, description = 'Off somebody else\'s car.' },
 ```
 
-No images ship with this. Without a matching PNG in your inventory's image
-folder the items still work, they just show a blank square.
+**Images.** All 12 ship in `inventory_images/`, named to match. Copy them into
+your inventory's image folder:
+
+| Inventory | Where |
+|---|---|
+| ox_inventory | `ox_inventory/web/images/` |
+| qb-inventory | `qb-inventory/html/images/` |
+| ps-inventory | `ps-inventory/html/images/` |
+| qs-inventory | `qs-inventory/html/images/` |
+| codem-inventory | `codem-inventory/html/itemimages/` |
+| core_inventory | `core_inventory/html/img/` |
+
+If yours is not listed, put them wherever its existing item PNGs already live.
+Restart the inventory resource afterwards. `lockpick.png` is in there too —
+skip it if you already have one you like.
 
 Already have a lockpick, or want different names? Every one of these is a config
 value — change `Config.Access.item`, `Config.Theft.entry.methods.lockpick.item`,
