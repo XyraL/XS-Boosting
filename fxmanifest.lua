@@ -5,7 +5,7 @@ lua54 'yes'
 name 'XS-Boosting'
 author 'XyraL'
 description 'Standalone vehicle boosting for QBox/QBCore. Tiers, duo runs, a four-man heist, chop shops and an in-game builder.'
-version '0.5.7'
+version '0.5.8'
 
 -- Works on QBox (qbx_core) OR QBCore (qb-core). The bridge auto-detects.
 -- Inventory, target, dispatch and vehicle keys are all auto-detected too and

@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.5.8
+
+- Fixed boosted cars coming without keys on servers running qb-vehiclekeys
+- The item images ship in `inventory_images/`, and the README says where they go for each inventory
+
+Replace everything except your config.lua. No SQL to run.
+
 ## 0.5.7
 
 Everything read flat, so this raises the amplitude rather than redrawing
