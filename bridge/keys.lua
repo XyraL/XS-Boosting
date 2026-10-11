@@ -26,6 +26,13 @@ if IS_SERVER then
             return
         end
 
+        -- Current qb-vehiclekeys gives keys from the server, by the plate without
+        -- GTA's padding. Older builds only have the client event.
+        if Keys.name == 'qb-vehiclekeys' then
+            plate = (tostring(plate or ''):gsub('^%s+', ''):gsub('%s+$', ''))
+            if pcall(function() exports['qb-vehiclekeys']:GiveKeys(src, plate) end) then return end
+        end
+
         TriggerClientEvent('XS-Boosting:client:giveKeys', src, netId, plate)
     end
 else
