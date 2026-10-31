@@ -2,7 +2,7 @@
 
 ## 0.5.9
 
-- Switching character ends your contract and takes you out of your crew, the same as logging off
+- Logging out ends your contract and takes you out of your crew, the same as leaving the server
 - Fixed a heist not ending properly when the leader left
 - If the buyer will not load, you can still hand the car over at the drop-off
 - A car that will not load no longer freezes placing it in the builder
