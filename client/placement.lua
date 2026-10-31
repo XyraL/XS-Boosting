@@ -117,7 +117,7 @@ function Placement.Vehicle(model)
     active = true
 
     local hash = joaat(model or 'sultan')
-    local loaded = lib.requestModel(hash, 5000)
+    local loaded = pcall(lib.requestModel, hash, 5000) and HasModelLoaded(hash)
     local ghost
 
     -- A vehicle's origin sits in the middle of the chassis, so dropping that

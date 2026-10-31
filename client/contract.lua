@@ -464,7 +464,11 @@ local function bindBuyer(state)
             clearBuyerPed()
 
             local model = joaat(settings.ped.model)
-            if not lib.requestModel(model, 8000) then return end
+            if not (pcall(lib.requestModel, model, 8000) and HasModelLoaded(model)) then
+                buyerId = 'xsboost_buyer'
+                Target.AddSphere(buyerId, coords, radius, options)
+                return
+            end
 
             local ground = coords.z
             local found, z = GetGroundZFor_3dCoord(coords.x, coords.y, coords.z + 1.0, false)

@@ -466,6 +466,10 @@ AddEventHandler('playerDropped', function()
     Crew.Quit(source)
 end)
 
+AddEventHandler('QBCore:Server:OnPlayerUnload', function(src)
+    Crew.Quit(tonumber(src) or source)
+end)
+
 CreateThread(function()
     while true do
         Wait(5000)

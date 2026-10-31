@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.5.9
+
+- Switching character ends your contract and takes you out of your crew, the same as logging off
+- Fixed a heist not ending properly when the leader left
+- If the buyer will not load, you can still hand the car over at the drop-off
+- A car that will not load no longer freezes placing it in the builder
+
+Replace everything except your config.lua. No SQL to run.
+
 ## 0.5.8
 
 - Fixed boosted cars coming without keys on servers running qb-vehiclekeys

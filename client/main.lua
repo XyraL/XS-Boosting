@@ -256,6 +256,12 @@ AddEventHandler('onResourceStop', function(resource)
     Target.RemoveAll()
 end)
 
+RegisterNetEvent('QBCore:Client:OnPlayerUnload', function()
+    UI.Close()
+    Builder.Close()
+    Boost.eventJoined = false
+end)
+
 CreateThread(function()
     while true do
         Wait(2000)

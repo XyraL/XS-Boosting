@@ -663,15 +663,25 @@ function Jobs.Active()
     return active
 end
 
-AddEventHandler('playerDropped', function()
-    local job = Jobs.Get(source)
+local function leave(src)
+    local job = Jobs.Get(src)
     if not job then return end
 
-    if job.holder == source then
-        Jobs.Fail(job, nil, true)
+    if job.holder ~= src then
+        Crew.Leave(job, src)
+    elseif job.heist then
+        Heist.Fail(job)
     else
-        Crew.Leave(job, source)
+        Jobs.Fail(job, nil, true)
     end
+end
+
+AddEventHandler('playerDropped', function()
+    leave(source)
+end)
+
+AddEventHandler('QBCore:Server:OnPlayerUnload', function(src)
+    leave(tonumber(src) or source)
 end)
 
 -- One thread runs every live job: the clock, spawning the car in once somebody
