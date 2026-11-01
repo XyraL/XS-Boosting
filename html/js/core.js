@@ -103,11 +103,20 @@ XS.ago = (stamp) => {
 
 /* Tier colour is derived from its position in the ladder, so adding a tier in
    config never needs a matching colour added here. */
-XS.tierColour = (tierId) => {
+XS.tierRgb = (tierId) => {
   const tiers = XS.state.stats?.tiers || [];
   const index = Math.max(0, tiers.findIndex((t) => t.id === tierId));
   const hues = [188, 152, 42, 6, 280, 320];
-  return `hsl(${hues[index % hues.length]} 85% 62%)`;
+  const h = hues[index % hues.length];
+  const k = (n) => (n + h / 30) % 12;
+  const a = 0.85 * Math.min(0.62, 1 - 0.62);
+  return [0, 8, 4].map((n) => Math.round(255 * (0.62 - a * Math.max(-1, Math.min(k(n) - 3, 9 - k(n), 1)))));
+};
+
+XS.tierStyle = (tierId) => {
+  const c = XS.tierRgb(tierId);
+  const mix = (b, p) => c.map((v, i) => Math.round(v * p + b[i] * (1 - p))).join(', ');
+  return `--tier:rgb(${c.join(', ')});--tier-rgb:${c.join(', ')};--tier-hi:rgb(${mix([255, 255, 255], 0.7)});--tier-edge:rgb(${mix([42, 51, 73], 0.6)})`;
 };
 
 XS.typeLabel = (type) => ({

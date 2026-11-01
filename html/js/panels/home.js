@@ -173,7 +173,7 @@ XS.Home.rates = function (s) {
     const arrow = Math.abs(delta) < 0.005 ? '·' : delta > 0 ? '▲' : '▼';
 
     return `
-      <div class="feed__row is-tiered ${dir}" data-go-panel="market" style="cursor:pointer;--tier:${XS.tierColour(r.id)}">
+      <div class="feed__row is-tiered ${dir}" data-go-panel="market" style="cursor:pointer;${XS.tierStyle(r.id)}">
         <span class="feed__when">${arrow}</span>
         <span class="feed__what"><b>${XS.esc(r.label)}</b></span>
         <span class="feed__amt ${dir ? '' : 'zero'}">${r.multiplier.toFixed(2)}×</span>

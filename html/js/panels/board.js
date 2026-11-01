@@ -109,7 +109,6 @@ XS.Board.event = function () {
 };
 
 XS.Board.card = function (c, index) {
-  const colour = XS.tierColour(c.tier);
   const locked = c.locked;
   const meta = [];
 
@@ -132,7 +131,7 @@ XS.Board.card = function (c, index) {
     : `<span class="card__take">Take<svg viewBox="0 0 24 24" style="width:13px;height:13px"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>`;
 
   return `
-    <article class="card ${locked ? 'is-locked' : ''}" style="--tier:${colour}"
+    <article class="card ${locked ? 'is-locked' : ''}" style="${XS.tierStyle(c.tier)}"
              ${locked ? '' : `data-take="${XS.esc(c.id)}"`}>
       <div class="card__bar">
         <span class="card__path">${XS.esc(c.tierLabel || c.tier)}</span>

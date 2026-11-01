@@ -26,7 +26,7 @@ XS.Market.draw = function () {
     const width = Math.max(2, Math.min(100, ((r.multiplier - RANGE.min) / span) * 100));
 
     return `
-      <div class="rate" style="--tier:${XS.tierColour(r.id)}">
+      <div class="rate" style="${XS.tierStyle(r.id)}">
         <div class="rate__name">
           <b>${XS.esc(r.label)}</b>
           <small>${dir === 'flat' ? 'holding' : dir === 'up' ? 'climbing' : 'sliding'}</small>

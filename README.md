@@ -3,22 +3,22 @@
 <p align="center">Standalone vehicle boosting for <strong>QBox</strong> and <strong>QBCore</strong>.</p>
 
 <p align="center">
-  <a href="https://github.com/XyraL/XS-Boosting/releases"><img src="https://img.shields.io/github/v/release/XyraL/XS-Boosting?style=flat-square&color=55e2ad&label=release" alt="Latest release"></a>
+  <a href="https://github.com/XyraL/XS-Boosting/releases"><img src="https://img.shields.io/github/v/release/XyraL/XS-Boosting?style=flat-square&color=9aa5ff&label=release" alt="Latest release"></a>
   <img src="https://img.shields.io/badge/framework-QBox%20%7C%20QBCore-55dcff?style=flat-square" alt="framework">
-  <img src="https://img.shields.io/badge/status-beta-f5a524?style=flat-square" alt="status: beta">
   <img src="https://img.shields.io/badge/price-free-30d158?style=flat-square" alt="price">
+  <a href="https://xyralscripts.dev/docs-xs-boosting"><img src="https://img.shields.io/badge/docs-xyralscripts.dev-a889ff?style=flat-square" alt="docs"></a>
   <a href="https://discord.gg/XRURAw4TM2"><img src="https://img.shields.io/badge/support-discord-5865F2?style=flat-square" alt="support"></a>
 </p>
 
 <p align="center">
+  <a href="https://xyralscripts.dev/xs-boosting">Website</a> &nbsp;·&nbsp;
+  <a href="https://xyralscripts.dev/docs-xs-boosting">Setup guide</a> &nbsp;·&nbsp;
+  <a href="https://xyralscripts.dev/demos/xs-boosting/">Live demo</a> &nbsp;·&nbsp;
   <a href="https://github.com/XyraL/XS-Boosting/releases">Releases</a> &nbsp;·&nbsp;
-  <a href="https://discord.gg/XRURAw4TM2">Support</a>
+  <a href="https://discord.gg/XRURAw4TM2">Discord</a>
 </p>
 
 ---
-
-> **Beta.** Still being worked on, so expect rough edges. If you hit one, tell
-> me on [Discord](https://discord.gg/XRURAw4TM2) and I will get it sorted.
 
 The car is the job.
 

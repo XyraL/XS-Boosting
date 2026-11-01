@@ -56,7 +56,7 @@ XS.Stats.you = function (stats) {
     const on = stats.tier && stats.tier.id === t.id;
 
     return `
-      <div class="rung ${on ? 'is-on' : ''} ${t.unlocked ? '' : 'is-locked'}" style="--tier:${XS.tierColour(t.id)}">
+      <div class="rung ${on ? 'is-on' : ''} ${t.unlocked ? '' : 'is-locked'}" style="${XS.tierStyle(t.id)}">
         <div class="rung__mark">${t.unlocked ? XS.icon.tick : XS.icon.lock}</div>
         <div>
           <b>${XS.esc(t.label)}</b>

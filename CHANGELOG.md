@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.0
+
+Out of beta.
+
+- Fixed parts of the menu showing up without their colours in game (buttons, tags, tier colours, the glow behind the tablet)
+- Fixed the HUD drawing a black box over the screen on some setups
+
+Replace everything except your config.lua. No SQL to run.
+
 ## 0.5.9
 
 - Logging out ends your contract and takes you out of your crew, the same as leaving the server
