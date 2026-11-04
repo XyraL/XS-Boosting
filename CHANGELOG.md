@@ -3,7 +3,7 @@
 ## 1.0.1
 
 - Fixed the builder showing a black screen when placing something
-- Fixed the screen going black during and after the lockpick, hotwire and tracker minigames
+- Fixed the screen going black during and after the minigames
 
 Replace everything except your config.lua. No SQL to run.
 
