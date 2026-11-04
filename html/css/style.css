@@ -107,6 +107,8 @@ input, select { font: inherit; }
   pointer-events: none;
 }
 
+.app:not(.has-window)::before { display: none; }
+
 .unit {
   position: relative;
   width: min(1280px, 92vw);

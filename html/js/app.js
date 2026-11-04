@@ -28,6 +28,14 @@ function syncVisibility() {
     !XS.el('#builder').classList.contains('hidden') ||
     !XS.el('#minigame').classList.contains('hidden')
   ));
+
+  // The backdrop belongs behind a window. Placing and the minigames happen
+  // in the world, so they need to see it.
+  XS.el('#app').classList.toggle('has-window',
+    !XS.el('#boot').classList.contains('hidden') ||
+    !XS.el('#unit').classList.contains('hidden') ||
+    (!XS.el('#builder').classList.contains('hidden') && !XS.Builder.placing)
+  );
 }
 
 function showUnit(which) {
@@ -307,8 +315,10 @@ window.addEventListener('message', (event) => {
       break;
 
     case 'builderPlacing':
+      XS.Builder.placing = !!data;
       XS.el('#placing').classList.toggle('hidden', !data);
       XS.el('#builder').style.visibility = data ? 'hidden' : '';
+      syncVisibility();
       break;
 
     default:
